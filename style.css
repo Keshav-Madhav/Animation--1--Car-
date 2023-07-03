@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    overflow-y: hidden;
+}
+
+.night{
+    height: 80vh;
+    width: 70vw;
+    margin: 5rem auto;
+    background: url("./assets/Img_1.png");
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0,0,0,0.4);
+    overflow-x: hidden;
+}
+
+/* .stars{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/Img_1_stars.png");
+    background-size: cover;
+    animation: pulseStars 1s linear infinite;
+} */
+
+.surface{
+    height: 140px;
+    width: 500%;
+    background: url("./assets/Img_02.png");
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-repeat: repeat-x;
+    animation: moveRight 6s linear infinite;
+    z-index: 2;
+}
+.num2{
+    transform: translateX(400px);
+    z-index: 0;
+    animation: moveRight 12s linear infinite;
+}
+
+.car{
+    animation: suspension 1s linear infinite;
+}
+.car-over{
+    position: absolute;
+    bottom: 7.4%;
+    left: 24%;
+    animation: car 20s linear infinite;
+    z-index: 1;
+}
+
+/* Add this CSS code to your page */
+.volume-control {
+    margin-top: 5px;
+    margin-left: 10px;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80px;
+    height: 5px;
+    background: #543a63;
+    outline: none;
+    border-radius: 5px;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #5a177e;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#mute-button {
+    background-color: #543a63;
+    color: rgb(183, 183, 183);
+    border: none;
+    padding: 2px 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor:pointer
+}
+
+
+@keyframes moveRight {
+    100%{
+        transform: translateX(-2950px);
+    }
+}
+
+@keyframes car{
+    100%{
+        transform:translateX(-50px);
+    }
+    50%{
+        transform:translateX(100px);
+    }
+    0%{
+        transform:translateX(-50px);
+    }
+}
+
+@keyframes suspension{
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+    1%{
+        transform: translateY(-1px);
+    }
+}
+
+/* @keyframes pulseStars {
+    100%{
+        width: 100%;
+    }
+    50%{
+        width: 100.05%;
+    }
+    0%{
+        width: 100%;
+    }
+} */
